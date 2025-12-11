@@ -7,6 +7,13 @@ import matplotlib.pyplot as plt
 from datetime import timedelta
 import os
 import plotly.graph_objects as go
+import google.auth
+
+key_path = os.path.join("secrets", "forecast2000-ec89eb4db84e.json")
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = key_path
+credentials, project_id = google.auth.default()
+
+
 
 # ---------------------------
 # 1. CONFIGURATION & DESIGN NEON
